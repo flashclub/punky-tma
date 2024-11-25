@@ -5,6 +5,8 @@ import { useNavHeight } from "@/components/Root/navHeightContext";
 import Quests from "./components/Quests";
 import Ranking from "./components/Ranking";
 import Invite from "./components/Invite";
+import RANKING_AVATAR from "@/assets/ui/shop-avatar.png";
+import OWN_AVATAR from "@/assets/ui/shop-own.png";
 
 export default function InfoPage() {
   const { navHeight } = useNavHeight();
@@ -45,7 +47,7 @@ export default function InfoPage() {
         {/* 顶部用户信息 */}
         <div className="bg-[#E7F0E9] border border-[#2D4F44] text-[#2D4F44] rounded-lg p-3 mb-2 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src="/soul-icon.png" alt="avatar" className="w-8 h-8" />
+            <img src={RANKING_AVATAR.src} alt="avatar" className="w-8 h-8" />
             <span className="">username</span>
           </div>
           <span className="">DIAMOND #1</span>
@@ -78,7 +80,11 @@ export default function InfoPage() {
             >
               <div className="flex items-center gap-3 ">
                 <span className=" w-6 ">{item.rank}</span>
-                <img src="/soul-icon.png" alt="avatar" className="w-6 h-6" />
+                <img
+                  src={RANKING_AVATAR.src}
+                  alt="avatar"
+                  className="w-6 h-6"
+                />
                 <span className="">{item.name}</span>
               </div>
               <span className="">{item.points}</span>
@@ -123,7 +129,7 @@ export default function InfoPage() {
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10">
                   <img
-                    src="/soul-icon.png"
+                    src={OWN_AVATAR.src}
                     alt="soul"
                     className="w-full h-full"
                   />
@@ -143,7 +149,7 @@ export default function InfoPage() {
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10">
                   <img
-                    src="/soul-icon.png"
+                    src={OWN_AVATAR.src}
                     alt="soul"
                     className="w-full h-full"
                   />
@@ -163,7 +169,7 @@ export default function InfoPage() {
               <div className="flex items-center gap-4">
                 <div className="w-10 h-10">
                   <img
-                    src="/soul-icon.png"
+                    src={OWN_AVATAR.src}
                     alt="soul"
                     className="w-full h-full"
                   />
@@ -191,9 +197,9 @@ export default function InfoPage() {
 
           <div className="bg-[#D9E4DD]  border border-[#2D4F44] rounded-2xl p-5 flex items-center justify-between cursor-pointer hover:opacity-90">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10">
+              <div className="min-w-10 h-10 flex-grow ">
                 <img
-                  src="/soul-icon.png"
+                  src={OWN_AVATAR.src}
                   alt="soul"
                   className="w-full h-full"
                 />
