@@ -244,7 +244,7 @@ export default function InfoPage() {
               </button>
             </div>
 
-            <div className="flex flex-col border-2 border-[#33E3FF]  items-center bg-[#B5C2B7] justify-center flex-1 ">
+            <div className="flex flex-col border-2 border-[#33E3FF]  items-center bg-[#625669]/65 justify-center flex-1 ">
               {currentTab === "quest" && questComponent()}
               {currentTab === "ranking" && rankingComponent()}
             </div>
